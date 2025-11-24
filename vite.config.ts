@@ -9,10 +9,10 @@ export default defineConfig({
     // entry points that Vite will process
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, "tsc-out/server/server.js"),
+        main: path.resolve(__dirname, "compiled/server/server.js"),
       },
     },
   },
 
-  root: "tsc-out",
+  root: "compiled",
 });

@@ -3,6 +3,7 @@
 To run this:
 
 - `npm install`
+- `npm run compile`
 - `npm run build`
 - `npm run server`
 - in another terminal, `npm run dev`
