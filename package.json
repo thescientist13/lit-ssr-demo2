@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf compiled dist",
-    "compile": "tsc",
-    "build": "vite build",
+    "build:client": "vite build",
+    "build:server": "vite build --config vite.config.server.ts",
+    "build": "npm run build:client && npm run build:server",
     "reinstall": "rm -rf node_modules package-lock.json && npm install",
-    "server": "node dist/src/server.js"
+    "start:server": "node build/server.js",
+    "start:browser": "http-server ./build"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.6",
@@ -18,6 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.7.7",
+    "http-server": "^14.1.1",
     "vite": "^5.4.9"
   }
 }

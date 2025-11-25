@@ -7,7 +7,7 @@ import { html } from "lit";
 import { render } from "@lit-labs/ssr";
 import { collectResult } from "@lit-labs/ssr/lib/render-result.js";
 
-import "../components/hello-world.js";
+import "../components/hello-world.ts";
 
 const app = new Hono();
 
