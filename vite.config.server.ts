@@ -16,10 +16,10 @@ export default defineConfig({
         entryFileNames: "[name].js",
         format: "esm",
       },
-      external: ['stream', 'http2', 'http', 'https', 'fs', 'path', 'lit', 'buffer'], // externals for server build
+      external: ['stream', 'http2', 'http', 'https', 'fs', 'path', 'buffer'], // externals for server build
     },
   },
   resolve: {
-    conditions: ["node"]
+    conditions: ["node"] // ensure specific entry-points modules are resolved correctly, like for Lit SSR
   }
 });
